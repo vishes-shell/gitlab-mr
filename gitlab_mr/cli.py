@@ -191,6 +191,8 @@ def actions(ctx, obj, only_count):
                 click.secho(" | ", fg="bright_white", bold=True, nl=False)
                 click.echo(merge_request.pretty_title, nl=False)
                 click.secho(" | ", fg="bright_white", bold=True, nl=False)
+                click.echo(merge_request.author, nl=False)
+                click.secho(" | ", fg="bright_white", bold=True, nl=False)
                 click.echo(merge_request.url, nl=False)
                 click.secho(" | ", fg="bright_white", bold=True, nl=False)
                 click.echo(merge_request.pretty_action, nl=False)
