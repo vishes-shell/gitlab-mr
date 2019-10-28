@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 88
+target-version = ["py37"]
+exclude = '''
+(
+  /(
+      \.git
+    | \.mypy_cache
+  )/
+)
+'''
+
+# settings are moved from setup.cfg since seed-isort-config populate only
+# .isort.cfg and pyproject.toml files and hence
+# pyproject.toml is used to eliminate extra .isort.cfg file
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+indent = "    "
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+no_lines_before = "LOCALFOLDER"
+include_trailing_comma = true
