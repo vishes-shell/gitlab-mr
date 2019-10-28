@@ -24,7 +24,13 @@ class Actions(enum.Enum):
 
     @classmethod
     def notable_actions(cls):
-        return (cls.ResolveDiscussions, cls.ResolveConflicts, cls.Merge, cls.Review)
+        return (
+            cls.ResolveDiscussions,
+            cls.ResolveConflicts,
+            cls.ResolveOrDiscuss,
+            cls.Merge,
+            cls.Review,
+        )
 
     @classmethod
     def wait_actions(cls):
